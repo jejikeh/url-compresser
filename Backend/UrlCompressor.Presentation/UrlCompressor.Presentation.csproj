@@ -16,6 +16,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\UrlCompressor.Application\UrlCompressor.Application.csproj" />
+      <ProjectReference Include="..\UrlCompressor.Domain\UrlCompressor.Domain.csproj" />
       <ProjectReference Include="..\UrlCompressor.Infrastructure\UrlCompressor.Infrastructure.csproj" />
     </ItemGroup>
 
