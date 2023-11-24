@@ -1,0 +1,47 @@
+﻿@using UrlCompressor.Domain
+@using System.Globalization
+<div class="content">
+    @if (Model.Item1.Count == 0)
+            {
+                <h3>404...</h3>
+            }
+            else
+            {
+                <table>
+                    <thead>
+                    <tr>
+                        <th>view</th>
+                        <th>url</th>
+                        <th>hits</th>
+                        <th>created</th>
+                        <th>delete</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    @foreach (CompressedUrl compressedUrl in Model.Item1)
+                    {
+                        <tr>
+                            <td><a href="/link/@compressedUrl.Id">@(compressedUrl.Id.ToString()[..4])...</a></td>
+                            <td><a href="~/@compressedUrl.SmallUrl">@compressedUrl.SmallUrl</a></td>
+                            <td>@compressedUrl.Hits</td>
+                            <td>@compressedUrl.CreatedAt.ToString(CultureInfo.InvariantCulture)</td>
+                            <td><input class="ghost-button" type="submit" value="delete" onclick="location.href='@Url.Action("Delete", "Home", new { Key = compressedUrl.Id.ToString() })'"/></td>
+                        </tr>
+                    }
+                </table>
+            }
+
+    <div class="pagination" style="padding-top: 16px">
+        @foreach (var page in Enumerable.Range((int)Model.Item2 < 10 ? 1 : (int)Model.Item2 - 5, 10))
+        {
+            @if (page == (int)Model.Item2)
+            {
+                <a href="@(page)" style="background-color: black; color: white"> @(page) </a>
+                continue;
+            }
+
+            <a href="@(page)"> @(page) </a>
+        }
+    </div>
+</div>

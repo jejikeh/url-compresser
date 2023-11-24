@@ -1,0 +1,28 @@
+﻿@using System.Globalization
+<div class="content">
+    <h1 class="display-4">url-compressor</h1>
+    <table style="padding-bottom: 32px;">
+        <thead>
+        <tr>
+            <th>redirect-to</th>
+            <th>url</th>
+            <th>hits</th>
+            <th>created</th>
+            <th>delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><a href="@Model.InitialUrl">@Model.InitialUrl</a></td>
+            <td><a href="~/@Model.SmallUrl">@Model.SmallUrl</a></td>
+            <td>@Model.Hits</td>
+            <td>@Model.CreatedAt.ToString(CultureInfo.InvariantCulture)</td>
+            <td><input class="ghost-button" type="submit" value="delete" onclick="location.href='@Url.Action("Delete", "Home", new { Key = @Model.Id.ToString() })'"/></td>
+        </tr>
+    </table>
+    <form asp-controller="Home" asp-action="UpdateLink" style="padding-top: 12px;">
+        <input class="ghost-input" type="text" name="url" required placeholder="www.google.com" />
+        <input hidden="hidden" name="key" value="@Model.Id"/>
+        <input class="ghost-button" type="submit" value="Update" />
+    </form>
+</div>

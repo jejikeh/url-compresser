@@ -8,7 +8,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deploy", "Deploy", "{97A1D1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlCompressor.Domain", "Backend\Domain\UrlCompressor.Domain\UrlCompressor.Domain.csproj", "{4CE11505-6A87-4C52-B684-87DD56DC1145}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Backend\Application\Application.csproj", "{7F86B58A-63B1-4CB8-936D-450A8B372E33}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlCompressor.Application", "Backend\UrlCompressor.Application\UrlCompressor.Application.csproj", "{7F86B58A-63B1-4CB8-936D-450A8B372E33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlCompressor.Infrastructure", "Backend\UrlCompressor.Infrastructure\UrlCompressor.Infrastructure.csproj", "{44BDFD91-818D-4267-8E08-CFFB28522B54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlCompressor.Presentation", "Backend\UrlCompressor.Presentation\UrlCompressor.Presentation.csproj", "{5961520C-367C-4F53-A389-E4F7D23A217D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,9 +28,19 @@ Global
 		{7F86B58A-63B1-4CB8-936D-450A8B372E33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F86B58A-63B1-4CB8-936D-450A8B372E33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F86B58A-63B1-4CB8-936D-450A8B372E33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44BDFD91-818D-4267-8E08-CFFB28522B54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44BDFD91-818D-4267-8E08-CFFB28522B54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44BDFD91-818D-4267-8E08-CFFB28522B54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44BDFD91-818D-4267-8E08-CFFB28522B54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5961520C-367C-4F53-A389-E4F7D23A217D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5961520C-367C-4F53-A389-E4F7D23A217D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5961520C-367C-4F53-A389-E4F7D23A217D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5961520C-367C-4F53-A389-E4F7D23A217D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4CE11505-6A87-4C52-B684-87DD56DC1145} = {10A82A45-E600-4891-AA1D-F79BF402BFE9}
 		{7F86B58A-63B1-4CB8-936D-450A8B372E33} = {10A82A45-E600-4891-AA1D-F79BF402BFE9}
+		{44BDFD91-818D-4267-8E08-CFFB28522B54} = {10A82A45-E600-4891-AA1D-F79BF402BFE9}
+		{5961520C-367C-4F53-A389-E4F7D23A217D} = {10A82A45-E600-4891-AA1D-F79BF402BFE9}
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,77 @@
+body {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+body > *, body > * > *, main figure > *, main figure > div > *, main p {
+    margin-bottom: 30px
+}
+
+body a.self, body a.parent {
+    font-style: italic
+}
+
+body a:hover, main a:hover > * {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none
+}
+
+a:link, a:visited {
+    color: #000
+}
+
+.content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+main a {
+    text-decoration: underline
+}
+
+table td, table th {
+    vertical-align: top;
+    padding: 10px 10px;
+    text-align: left;
+}
+
+table td > pre, table th > pre {
+    background: none;
+    padding: 0;
+    margin: 0
+}
+
+table tr img {
+    margin-bottom: 0
+}
+
+.ghost-input {
+    border:1px solid #000;
+    outline: none;
+    box-sizing: border-box;
+    font-size: medium;
+    color: #000;
+    background: #fff;
+}
+
+.ghost-button {
+    background-color: transparent;
+    border:1px solid #000;
+    font-size: medium;
+}
+
+.ghost-button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}

@@ -4,8 +4,8 @@ public class CompressedUrl
 {
     public Guid Id { get; init; }
     
-    public required string InitialUrl { get; init; }
-    public required string SmallUrl { get; init; }
+    public required string InitialUrl { get; set; }
+    public required string SmallUrl { get; set; }
     
     public DateTime CreatedAt { get; init; }
     
