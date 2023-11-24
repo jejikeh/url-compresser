@@ -40,9 +40,13 @@ public static class InfrastructureConfiguration
     {
         return services.AddDbContext<UrlCompressorDbContext>(options =>
         {
-            options.UseMySQL(
-                connectionString,
-                b => b.MigrationsAssembly(typeof(UrlCompressorDbContext).Assembly.FullName));
+            options.UseMySql(
+                connectionString, 
+                ServerVersion.AutoDetect(connectionString), 
+                b =>
+                {
+                    b.MigrationsAssembly(typeof(UrlCompressorDbContext).Assembly.FullName);
+                });
         });
     }
 
