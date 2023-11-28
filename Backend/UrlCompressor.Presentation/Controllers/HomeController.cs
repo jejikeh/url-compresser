@@ -59,7 +59,6 @@ public class HomeController : Controller
         await updateUrlHandler.HandleAsync(new UpdateUrlRequest(key, url), cancellationToken);
         return RedirectToAction("Details", new {key = key});
     }
-
     
     [HttpGet("/link/{key}")]
     public async Task<IActionResult> Details(string key, [FromServices] GetUrlHandler handler)

@@ -8,7 +8,6 @@
 
 
     <ItemGroup>
-      <ProjectReference Include="..\Domain\UrlCompressor.Domain\UrlCompressor.Domain.csproj" />
       <ProjectReference Include="..\UrlCompressor.Domain\UrlCompressor.Domain.csproj" />
     </ItemGroup>
 
