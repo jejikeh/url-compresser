@@ -9,7 +9,7 @@ public static class ApplicationConfigurator
 {
     public static WebApplicationBuilder ConfigureBuilder(this WebApplicationBuilder builder)
     {
-        var applicationConfiguration = new AppConfiguration(builder.Configuration);
+        var applicationConfiguration = new AppConfiguration();
 
         builder.Services
             .AddSingleton<IApplicationConfiguration>(applicationConfiguration)

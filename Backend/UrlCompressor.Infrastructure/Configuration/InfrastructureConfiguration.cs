@@ -20,8 +20,8 @@ public static class InfrastructureConfiguration
     {
         return configuration.DatabaseConfiguration.Provider switch
         {
-            DatabaseConfiguration.DatabaseProvider.Sqlite => services.AddSqliteDbContext(configuration.DatabaseConfiguration.ConnectionString),
-            DatabaseConfiguration.DatabaseProvider.MySql => services.AddMySqlDbContext(configuration.DatabaseConfiguration.ConnectionString),
+            DatabaseProvider.Sqlite => services.AddSqliteDbContext(configuration.DatabaseConfiguration.ConnectionString),
+            DatabaseProvider.MySql => services.AddMySqlDbContext(configuration.DatabaseConfiguration.ConnectionString),
             _ => throw new ArgumentOutOfRangeException()
         };
     }

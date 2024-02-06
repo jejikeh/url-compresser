@@ -1,12 +1,13 @@
 namespace UrlCompressor.Infrastructure.Configuration;
 
+public enum DatabaseProvider
+{
+    Sqlite,
+    MySql
+}
+
 public struct DatabaseConfiguration
 {
-    public enum DatabaseProvider
-    {
-        Sqlite,
-        MySql
-    }
     
     public DatabaseProvider Provider { get; set; }
     public string ConnectionString { get; set; }
